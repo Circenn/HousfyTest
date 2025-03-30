@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-30T18:42:08.868626" rpa="false" schemaversion="5">
+<suite id="s1" name="Standard User" source="E:\QA\TAU\HOUSFY\standard_user.robot">
+<test id="s1-t1" name="Navigate to main page" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-30T18:42:09.093579" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-30T18:42:09.093357" elapsed="1.620407"/>
+</kw>
+<status status="PASS" start="2025-03-30T18:42:09.092453" elapsed="1.621663"/>
+</test>
+<test id="s1-t2" name="Test standard_user login" line="18">
+<kw name="Enter username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-30T18:42:10.715786" level="INFO">Typing text 'standard_user' into text field 'css:[data-test="username"]'.</msg>
+<arg>css:[data-test="username"]</arg>
+<arg>${userid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T18:42:10.715459" elapsed="0.063077"/>
+</kw>
+<status status="PASS" start="2025-03-30T18:42:10.715079" elapsed="0.063576"/>
+</kw>
+<kw name="Enter password">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-30T18:42:10.779407" level="INFO">Typing password into text field 'css:[data-test="password"]'.</msg>
+<msg time="2025-03-30T18:42:10.796863" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:[data-test="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-30T18:42:10.779236" elapsed="0.047361"/>
+</kw>
+<status status="PASS" start="2025-03-30T18:42:10.778986" elapsed="0.047714"/>
+</kw>
+<status status="PASS" start="2025-03-30T18:42:10.714561" elapsed="0.112417"/>
+</test>
+<status status="PASS" start="2025-03-30T18:42:08.869726" elapsed="1.957849"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Standard User" id="s1" pass="2" fail="0" skip="0">Standard User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
