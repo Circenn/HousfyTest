@@ -16,4 +16,5 @@ ${poscode}        08015
 ${price tag}    css:[data-test="inventory-item-price"]
 ${price total}    css:[data-test="subtotal-label"]
 
+${timeout}        2
 ${Delay}          5s
