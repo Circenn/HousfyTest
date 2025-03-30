@@ -1,187 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-30T21:19:14.171274" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-30T22:14:15.385648" rpa="false" schemaversion="5">
 <suite id="s1" name="HOUSFY" source="E:\QA\TAU\HOUSFY">
-<suite id="s1-s1" name="Standard User" source="E:\QA\TAU\HOUSFY\standard_user.robot">
+<suite id="s1-s1" name="002.Locked Out User" source="E:\QA\TAU\HOUSFY\002.locked_out_user.robot">
 <test id="s1-s1-t1" name="Navigate to main page" line="16">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:14.401915" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-03-30T22:14:15.619819" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${SiteUrl}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-30T21:19:14.401530" elapsed="1.645428"/>
+<status status="PASS" start="2025-03-30T22:14:15.619442" elapsed="2.144430"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:14.400359" elapsed="1.647031"/>
+<status status="PASS" start="2025-03-30T22:14:15.618221" elapsed="2.146006"/>
 </test>
 <test id="s1-s1-t2" name="Test standard_user login" line="19">
 <kw name="Enter username">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.049427" level="INFO">Typing text 'standard_user' into text field 'css:[data-test="username"]'.</msg>
+<msg time="2025-03-30T22:14:17.766486" level="INFO">Typing text 'locked_out_user' into text field 'css:[data-test="username"]'.</msg>
 <arg>css:[data-test="username"]</arg>
 <arg>${userid}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.049051" elapsed="0.055807"/>
+<status status="PASS" start="2025-03-30T22:14:17.766011" elapsed="0.059973"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.048664" elapsed="0.056391"/>
+<status status="PASS" start="2025-03-30T22:14:17.765637" elapsed="0.060538"/>
 </kw>
 <kw name="Enter password">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.106010" level="INFO">Typing password into text field 'css:[data-test="password"]'.</msg>
-<msg time="2025-03-30T21:19:16.123195" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-03-30T22:14:17.827105" level="INFO">Typing password into text field 'css:[data-test="password"]'.</msg>
+<msg time="2025-03-30T22:14:17.845696" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>css:[data-test="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.105722" elapsed="0.045558"/>
+<status status="PASS" start="2025-03-30T22:14:17.826831" elapsed="0.044120"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.105345" elapsed="0.046105"/>
+<status status="PASS" start="2025-03-30T22:14:17.826452" elapsed="0.044667"/>
 </kw>
+<status status="PASS" start="2025-03-30T22:14:17.765003" elapsed="0.106417"/>
+</test>
+<test id="s1-s1-t3" name="Navigate to item galery" line="23">
 <kw name="Click login button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.152457" level="INFO">Clicking button 'css:[data-test="login-button"]'.</msg>
+<msg time="2025-03-30T22:14:17.873469" level="INFO">Clicking button 'css:[data-test="login-button"]'.</msg>
 <arg>css:[data-test="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.152205" elapsed="0.055472"/>
+<status status="PASS" start="2025-03-30T22:14:17.873234" elapsed="0.043358"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.151802" elapsed="0.056058"/>
+<status status="PASS" start="2025-03-30T22:14:17.872903" elapsed="0.043844"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.048048" elapsed="0.160070"/>
+<status status="PASS" start="2025-03-30T22:14:17.872305" elapsed="0.044661"/>
 </test>
-<test id="s1-s1-t3" name="Add item to shopping cart" line="24">
+<test id="s1-s1-t4" name="Add item to shopping cart" line="26">
 <kw name="Add to cart item">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.210266" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-backpack"]'.</msg>
+<msg time="2025-03-30T22:14:17.918633" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-backpack"]'.</msg>
+<msg time="2025-03-30T22:14:18.012364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:18.012742" level="FAIL">Button with locator 'css:[data-test="add-to-cart-sauce-labs-backpack"]' not found.</msg>
 <arg>css:[data-test="add-to-cart-sauce-labs-backpack"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.210009" elapsed="0.044953"/>
+<status status="FAIL" start="2025-03-30T22:14:17.918384" elapsed="0.097034">Button with locator 'css:[data-test="add-to-cart-sauce-labs-backpack"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.209630" elapsed="0.045494"/>
+<status status="FAIL" start="2025-03-30T22:14:17.918117" elapsed="0.097482">Button with locator 'css:[data-test="add-to-cart-sauce-labs-backpack"]' not found.</status>
 </kw>
 <kw name="Check cart items quantity">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${cart icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.255870" elapsed="0.011312"/>
+<status status="NOT RUN" start="2025-03-30T22:14:18.015935" elapsed="0.000172"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.277341" level="INFO">${cart number} = 1</msg>
-<var>${cart number}</var>
-<arg>${cart icon}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.267384" elapsed="0.010083"/>
-</kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<arg>${cart number}</arg>
-<arg>${wanted number}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.277632" elapsed="0.000307"/>
-</kw>
-<status status="PASS" start="2025-03-30T21:19:16.255376" elapsed="0.022670"/>
-</kw>
-<status status="PASS" start="2025-03-30T21:19:16.208969" elapsed="0.069301"/>
+<status status="FAIL" start="2025-03-30T22:14:17.917617" elapsed="0.098723">Button with locator 'css:[data-test="add-to-cart-sauce-labs-backpack"]' not found.</status>
 </test>
-<test id="s1-s1-t4" name="Navigate to shopping cart" line="28">
+<test id="s1-s1-t5" name="Navigate to shopping cart" line="30">
 <kw name="Navigate to shopping cart">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.280036" level="INFO">Clicking link 'css:[data-test="shopping-cart-link"]'.</msg>
+<msg time="2025-03-30T22:14:18.018104" level="INFO">Clicking link 'css:[data-test="shopping-cart-link"]'.</msg>
+<msg time="2025-03-30T22:14:18.108194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:18.108533" level="FAIL">Link with locator 'css:[data-test="shopping-cart-link"]' not found.</msg>
 <arg>css:[data-test="shopping-cart-link"]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.279816" elapsed="0.037283"/>
+<status status="FAIL" start="2025-03-30T22:14:18.017882" elapsed="0.092062">Link with locator 'css:[data-test="shopping-cart-link"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.279543" elapsed="0.037713"/>
+<status status="FAIL" start="2025-03-30T22:14:18.017619" elapsed="0.092506">Link with locator 'css:[data-test="shopping-cart-link"]' not found.</status>
 </kw>
 <kw name="Check item added">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:[data-test="inventory-item"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.317938" elapsed="0.011660"/>
+<status status="NOT RUN" start="2025-03-30T22:14:18.110368" elapsed="0.000124"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.317575" elapsed="0.012168"/>
-</kw>
-<status status="PASS" start="2025-03-30T21:19:16.279000" elapsed="0.050940"/>
+<status status="FAIL" start="2025-03-30T22:14:18.017170" elapsed="0.093538">Link with locator 'css:[data-test="shopping-cart-link"]' not found.</status>
 </test>
-<test id="s1-s1-t5" name="Navigate to Checkout page" line="32">
+<test id="s1-s1-t6" name="Navigate to Checkout page" line="34">
 <kw name="Click checkout button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.331780" level="INFO">Clicking button 'css:[data-test="checkout"]'.</msg>
+<msg time="2025-03-30T22:14:18.112621" level="INFO">Clicking button 'css:[data-test="checkout"]'.</msg>
+<msg time="2025-03-30T22:14:18.186121" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:18.186329" level="FAIL">Button with locator 'css:[data-test="checkout"]' not found.</msg>
 <arg>css:[data-test="checkout"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.331548" elapsed="0.037695"/>
+<status status="FAIL" start="2025-03-30T22:14:18.112372" elapsed="0.075214">Button with locator 'css:[data-test="checkout"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.331274" elapsed="0.038119"/>
+<status status="FAIL" start="2025-03-30T22:14:18.112057" elapsed="0.075689">Button with locator 'css:[data-test="checkout"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.330722" elapsed="0.038946"/>
+<status status="FAIL" start="2025-03-30T22:14:18.111510" elapsed="0.076535">Button with locator 'css:[data-test="checkout"]' not found.</status>
 </test>
-<test id="s1-s1-t6" name="Add Your Information Data" line="35">
+<test id="s1-s1-t7" name="Add Your Information Data" line="37">
 <kw name="Enter personal data">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.371601" level="INFO">Typing text 'Circenn' into text field 'css:[data-test="firstName"]'.</msg>
+<msg time="2025-03-30T22:14:18.189958" level="INFO">Typing text 'Circenn' into text field 'css:[data-test="firstName"]'.</msg>
+<msg time="2025-03-30T22:14:18.248755" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:18.248963" level="FAIL">Element with locator 'css:[data-test="firstName"]' not found.</msg>
 <arg>css:[data-test="firstName"]</arg>
 <arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.371344" elapsed="0.041288"/>
+<status status="FAIL" start="2025-03-30T22:14:18.189673" elapsed="0.060884">Element with locator 'css:[data-test="firstName"]' not found.</status>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.413226" level="INFO">Typing text 'Gomez' into text field 'css:[data-test="lastName"]'.</msg>
 <arg>css:[data-test="lastName"]</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.412827" elapsed="0.038089"/>
+<status status="NOT RUN" start="2025-03-30T22:14:18.250791" elapsed="0.000160"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.451522" level="INFO">Typing text '08015' into text field 'css:[data-test="postalCode"]'.</msg>
 <arg>css:[data-test="postalCode"]</arg>
 <arg>${poscode}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.451107" elapsed="0.037881"/>
+<status status="NOT RUN" start="2025-03-30T22:14:18.251081" elapsed="0.000107"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.371015" elapsed="0.118119"/>
+<status status="FAIL" start="2025-03-30T22:14:18.189334" elapsed="0.062028">Element with locator 'css:[data-test="firstName"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.370427" elapsed="0.118915"/>
+<status status="FAIL" start="2025-03-30T22:14:18.188821" elapsed="0.062789">Element with locator 'css:[data-test="firstName"]' not found.</status>
 </test>
-<test id="s1-s1-t7" name="Navigate to Overview page" line="38">
+<test id="s1-s1-t8" name="Navigate to Overview page" line="40">
 <kw name="Navigate to Overview page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.491243" level="INFO">Clicking button 'css:[data-test="continue"]'.</msg>
+<msg time="2025-03-30T22:14:18.253394" level="INFO">Clicking button 'css:[data-test="continue"]'.</msg>
+<msg time="2025-03-30T22:14:18.325693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:18.325900" level="FAIL">Button with locator 'css:[data-test="continue"]' not found.</msg>
 <arg>css:[data-test="continue"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.490941" elapsed="0.038512"/>
+<status status="FAIL" start="2025-03-30T22:14:18.253181" elapsed="0.074172">Button with locator 'css:[data-test="continue"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.490575" elapsed="0.039032"/>
+<status status="FAIL" start="2025-03-30T22:14:18.252916" elapsed="0.074625">Button with locator 'css:[data-test="continue"]' not found.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.489968" elapsed="0.039862"/>
+<status status="FAIL" start="2025-03-30T22:14:18.252399" elapsed="0.075372">Button with locator 'css:[data-test="continue"]' not found.</status>
 </test>
-<test id="s1-s1-t8" name="Check order and Finish" line="41">
+<test id="s1-s1-t9" name="Check order and Finish" line="43">
 <kw name="Check order">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-30T22:14:23.490780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-30T22:14:23.491059" level="FAIL">Element 'css:[data-test="inventory-item"]' not visible after 5 seconds.</msg>
 <arg>css:[data-test="inventory-item"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.531303" elapsed="0.006438"/>
+<status status="FAIL" start="2025-03-30T22:14:18.329294" elapsed="5.163128">Element 'css:[data-test="inventory-item"]' not visible after 5 seconds.</status>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.530959" elapsed="0.007028"/>
+<status status="FAIL" start="2025-03-30T22:14:18.329023" elapsed="5.163588">Element 'css:[data-test="inventory-item"]' not visible after 5 seconds.</status>
 </kw>
 <kw name="Finish order">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-30T21:19:16.538788" level="INFO">Clicking button 'css:[data-test="finish"]'.</msg>
-<arg>css:[data-test="finish"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-30T21:19:16.538554" elapsed="0.040217"/>
+<status status="NOT RUN" start="2025-03-30T22:14:23.492971" elapsed="0.000192"/>
 </kw>
-<status status="PASS" start="2025-03-30T21:19:16.538203" elapsed="0.040714"/>
-</kw>
-<status status="PASS" start="2025-03-30T21:19:16.530458" elapsed="0.048725"/>
+<status status="FAIL" start="2025-03-30T22:14:18.328563" elapsed="5.164821">Element 'css:[data-test="inventory-item"]' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" start="2025-03-30T21:19:14.189419" elapsed="2.390665"/>
+<status status="FAIL" start="2025-03-30T22:14:15.404845" elapsed="8.089359"/>
 </suite>
-<status status="PASS" start="2025-03-30T21:19:14.174341" elapsed="2.406776"/>
+<status status="FAIL" start="2025-03-30T22:14:15.389160" elapsed="8.106063"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="6" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="HOUSFY" id="s1" pass="8" fail="0" skip="0">HOUSFY</stat>
-<stat name="Standard User" id="s1-s1" pass="8" fail="0" skip="0">HOUSFY.Standard User</stat>
+<stat name="HOUSFY" id="s1" pass="3" fail="6" skip="0">HOUSFY</stat>
+<stat name="002.Locked Out User" id="s1-s1" pass="3" fail="6" skip="0">HOUSFY.002.Locked Out User</stat>
 </suite>
 </statistics>
 <errors>
