@@ -7,13 +7,13 @@ Library    String
 Resource    H.resources.robot
 
 *** Variables ***
-${userid}        problem_user
+${userid}        error_user
 ${password}      secret_sauce
 
 
 *** Test Cases ***
 
-#TEST TO CHECK LAST NAME FORM ERROR
+#TEST TOO CHECK PAGE NORMAL WORKFLOW
 
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
@@ -38,7 +38,9 @@ Navigate to Checkout page
 
 Add Your Information Data    
     Enter personal data
-    
+    Continue without last name
+    Check Error exists
+
 
 *** Keywords ***
 
@@ -53,7 +55,6 @@ Click login button
 
 Add to cart item
     Click Button    css:[data-test="add-to-cart-sauce-labs-backpack"]
-    Sleep    1s
 
 Check cart items quantity
     Wait Until Element Is Visible    ${cart icon}
@@ -74,6 +75,12 @@ Enter personal data
     Input Text    css:[data-test="lastName"]    ${lastname}
     Input Text    css:[data-test="postalCode"]    ${poscode}
 
-    Should Be Equal   css:[data-test="firstName"]    ${firstname}
-    Should Be Equal    css:[data-test="lastName"]    ${lastname}
-    Should Be Equal    css:[data-test="postalCode"]    ${poscode}
+Continue without last name   
+    Click Button    css:[data-test="continue"]
+
+Check Error exists
+    Wait Until Element Is Visible   css:[data-test="error"]
+
+Check Error type
+    Element Should Contain    css:[data-test="error"]    "Error: Last Name is required"
+

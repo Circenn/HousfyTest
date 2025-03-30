@@ -13,7 +13,7 @@ ${password}      secret_sauce
 
 *** Test Cases ***
 
-#Test to check if every item can be added to the shopping cart
+#TEST TO CHECK SHOPPING CART ADDED ITEMS
 
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
@@ -42,17 +42,17 @@ Click login button
 
 Add to cart item
     Click Button    css:[data-test="add-to-cart-sauce-labs-backpack"]
-    Sleep    5s
+    Sleep    1s
     Click Button    css:[data-test="add-to-cart-sauce-labs-bike-light"]
-    Sleep    5s
+    Sleep    1s
     Click Button    css:[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]
-    Sleep    5s
+    Sleep    1s
     Click Button    css:[data-test="add-to-cart-sauce-labs-fleece-jacket"]
-    Sleep    5s    
+    Sleep    1s    
     Click Button    css:[data-test="add-to-cart-sauce-labs-onesie"]
-    Sleep    5s
+    Sleep    1s
     Click Button    css:[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]
-    Sleep    5s
+    Sleep    1s
 
 Check cart items quantity
     Wait Until Element Is Visible    ${cart icon}

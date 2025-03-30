@@ -13,6 +13,8 @@ ${password}      secret_sauce
 
 *** Test Cases ***
 
+#TEST TOO CHECK PAGE NORMAL WORKFLOW
+
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
 
@@ -78,34 +80,15 @@ Enter personal data
     Input Text    css:[data-test="lastName"]    ${lastname}
     Input Text    css:[data-test="postalCode"]    ${poscode}
 
+    Should Be Equal   css:[data-test="firstName"]    ${firstname}
+    Should Be Equal    css:[data-test="lastName"]    ${lastname}
+    Should Be Equal    css:[data-test="postalCode"]    ${poscode}
+
 Navigate to Overview page
     Click Button    css:[data-test="continue"]
 
 Check order
     Wait Until Element Is Visible    css:[data-test="inventory-item"]
-
-# Convert item price - Esto es para convertir los precios en numeros para poder compararlos. Al tener texto en ello no estoy seguro como hacerlo. Pero aqui esta mi intento
-#     Wait Until Element Is Visible    ${price tag}  10s
-#     ${price_text}  Get Text  ${price tag}
-#     Log To Console  Extracted price: ${price_text}
-#     ${clean_price}  Replace String  ${price_text}  $  ${EMPTY}
-#     ${clean_price}  Strip String  ${clean_price}
-#     ${price item}  Convert To Number  ${clean_price}
-#     Log To Console  Converted price: ${price item}
-
-# Convert total price
-#     Wait Until Element Is Visible    ${price total}  10s
-#     ${price total_text}  Get Text  ${price total}
-#     Log To Console  Extracted price: ${price total_text}
-#     ${clean_total price}  Replace String Using Regexp  ${price total_text}    [^0-9.]  ${EMPTY}
-#     ${clean_final price}  Strip String  ${clean_total price}
-#     ${price}  Convert To Number  ${clean_final price}
-#     Log To Console  Converted price: ${price}    
-
-# Check Price Total  
-#     Wait Until Element Is Visible    ${price tag}
-#     ${price_label}    Get Text    ${price tag}
-#     Should Be Equal As Strings    ${price_label}    ${price total}
 
 Finish order
     Click Button    css:[data-test="finish"]

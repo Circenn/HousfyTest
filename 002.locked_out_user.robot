@@ -13,37 +13,17 @@ ${password}      secret_sauce
 
 *** Test Cases ***
 
+#TEST TO CHECK LOCKED OUT USER ERROR
+
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
 
-Test user login
+Test user login fails
     Enter username
-    Enter password
-
-Navigate to item galery    
+    Enter password  
     Click login button
+    Check Error exists
 
-Add item to shopping cart
-    Add to cart item
-    Check cart items quantity
-
-Navigate to shopping cart
-     Navigate to shopping cart
-     Check item added
-
-Navigate to Checkout page
-    Click checkout button
-
-Add Your Information Data    
-    Enter personal data
-
-Navigate to Overview page
-    Navigate to Overview page
-
-Check order and Finish
-    Check order
-    Finish order
-    
 
 *** Keywords ***
 
@@ -56,33 +36,8 @@ Enter password
 Click login button
     Click Button    css:[data-test="login-button"]
 
-Add to cart item
-    Click Button    css:[data-test="add-to-cart-sauce-labs-backpack"]
+Check Error exists
+    Wait Until Element Is Visible   css:[data-test="error"]
 
-Check cart items quantity
-    Wait Until Element Is Visible    ${cart icon}
-    ${cart number}=    Get Text    ${cart icon}
-    Should Be Equal As Numbers    ${cart number}    ${wanted number}
-
-Check item added
-    Wait Until Element Is Visible    css:[data-test="inventory-item"]
-
-Navigate to shopping cart
-    Click Link    css:[data-test="shopping-cart-link"]
-
-Click checkout button
-    Click Button    css:[data-test="checkout"]
-
-Enter personal data
-    Input Text    css:[data-test="firstName"]    ${firstname}
-    Input Text    css:[data-test="lastName"]    ${lastname}
-    Input Text    css:[data-test="postalCode"]    ${poscode}
-
-Navigate to Overview page
-    Click Button    css:[data-test="continue"]
-
-Check order
-    Wait Until Element Is Visible    css:[data-test="inventory-item"]
-
-Finish order
-    Click Button    css:[data-test="finish"]
+Check Error type
+    Element Should Contain    css:[data-test="error"]    "has been locked out"

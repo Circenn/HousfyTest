@@ -13,7 +13,7 @@ ${password}      secret_sauce
 
 *** Test Cases ***
 
-#TEST TO CHECK LAST NAME FORM ERROR
+#TEST TO CHECK ERROR TEXT ON NO PERSONAL INFO ADDED
 
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
@@ -37,7 +37,8 @@ Navigate to Checkout page
     Click checkout button
 
 Add Your Information Data    
-    Enter personal data
+    Continue without personal information
+    Check Error exists
     
 
 *** Keywords ***
@@ -69,11 +70,11 @@ Navigate to shopping cart
 Click checkout button
     Click Button    css:[data-test="checkout"]
 
-Enter personal data
-    Input Text    css:[data-test="firstName"]    ${firstname}
-    Input Text    css:[data-test="lastName"]    ${lastname}
-    Input Text    css:[data-test="postalCode"]    ${poscode}
+Continue without personal information   
+    Click Button    css:[data-test="continue"]
 
-    Should Be Equal   css:[data-test="firstName"]    ${firstname}
-    Should Be Equal    css:[data-test="lastName"]    ${lastname}
-    Should Be Equal    css:[data-test="postalCode"]    ${poscode}
+Check Error exists
+    Wait Until Element Is Visible   css:[data-test="error"]
+
+Check Error type
+    Element Should Contain    css:[data-test="error"]    "Error: Last Name is required"
