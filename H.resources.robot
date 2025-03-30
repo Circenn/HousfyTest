@@ -7,6 +7,7 @@ ${Browser}        Chrome
 ${SiteUrl}        https://www.saucedemo.com/
 ${cart icon}      css:[data-test="shopping-cart-badge"]
 ${wanted number}    1
+${wanted number error}    6
 
 ${firstname}      Circenn
 ${lastname}       Gomez
