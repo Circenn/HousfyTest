@@ -1,183 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-31T00:42:11.828951" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-31T01:07:39.623251" rpa="false" schemaversion="5">
 <suite id="s1" name="HOUSFY" source="E:\QA\TAU\HOUSFY">
-<suite id="s1-s1" name="004.problem user Part2" source="E:\QA\TAU\HOUSFY\004.problem_user_Part2.robot">
+<suite id="s1-s1" name="001.Standard User" source="E:\QA\TAU\HOUSFY\001.standard_user.robot">
 <test id="s1-s1-t1" name="Navigate to main page" line="18">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:12.055656" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-03-31T01:07:39.852629" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${SiteUrl}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-31T00:42:12.055312" elapsed="1.469659"/>
+<status status="PASS" start="2025-03-31T01:07:39.852273" elapsed="1.831985"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:12.054001" elapsed="1.471414"/>
+<status status="PASS" start="2025-03-31T01:07:39.851030" elapsed="1.833646"/>
 </test>
 <test id="s1-s1-t2" name="Test user login" line="21">
 <kw name="Enter username">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:13.527729" level="INFO">Typing text 'problem_user' into text field 'css:[data-test="username"]'.</msg>
+<msg time="2025-03-31T01:07:41.687170" level="INFO">Typing text 'standard_user' into text field 'css:[data-test="username"]'.</msg>
 <arg>css:[data-test="username"]</arg>
 <arg>${userid}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:13.527340" elapsed="0.064995"/>
+<status status="PASS" start="2025-03-31T01:07:41.686666" elapsed="0.057187"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.526935" elapsed="0.065600"/>
+<status status="PASS" start="2025-03-31T01:07:41.686181" elapsed="0.057863"/>
 </kw>
 <kw name="Enter password">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:13.593722" level="INFO">Typing password into text field 'css:[data-test="password"]'.</msg>
-<msg time="2025-03-31T00:42:13.614414" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-03-31T01:07:41.744986" level="INFO">Typing password into text field 'css:[data-test="password"]'.</msg>
+<msg time="2025-03-31T01:07:41.761465" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>css:[data-test="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:13.593419" elapsed="0.049606"/>
+<status status="PASS" start="2025-03-31T01:07:41.744713" elapsed="0.041138"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.592933" elapsed="0.050258"/>
+<status status="PASS" start="2025-03-31T01:07:41.744338" elapsed="0.041664"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.526230" elapsed="0.117188"/>
+<status status="PASS" start="2025-03-31T01:07:41.685512" elapsed="0.100808"/>
 </test>
 <test id="s1-s1-t3" name="Navigate to item galery" line="25">
 <kw name="Click login button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:13.645390" level="INFO">Clicking button 'css:[data-test="login-button"]'.</msg>
+<msg time="2025-03-31T01:07:41.788485" level="INFO">Clicking button 'css:[data-test="login-button"]'.</msg>
 <arg>css:[data-test="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:13.645143" elapsed="0.059706"/>
+<status status="PASS" start="2025-03-31T01:07:41.788185" elapsed="0.051921"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.644790" elapsed="0.060221"/>
+<status status="PASS" start="2025-03-31T01:07:41.787803" elapsed="0.052482"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.644139" elapsed="0.061096"/>
+<status status="PASS" start="2025-03-31T01:07:41.787166" elapsed="0.053472"/>
 </test>
 <test id="s1-s1-t4" name="Add item to shopping cart" line="28">
 <kw name="Add to cart item">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:13.707009" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-backpack"]'.</msg>
+<msg time="2025-03-31T01:07:41.842689" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-backpack"]'.</msg>
 <arg>css:[data-test="add-to-cart-sauce-labs-backpack"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:13.706782" elapsed="0.039281"/>
+<status status="PASS" start="2025-03-31T01:07:41.842436" elapsed="0.041368"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T00:42:14.747171" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T00:42:13.746259" elapsed="1.001234"/>
-</kw>
-<status status="PASS" start="2025-03-31T00:42:13.706508" elapsed="1.041146"/>
+<status status="PASS" start="2025-03-31T01:07:41.842038" elapsed="0.041923"/>
 </kw>
 <kw name="Check cart items quantity">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${cart icon}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.748367" elapsed="0.011631"/>
+<status status="PASS" start="2025-03-31T01:07:41.884720" elapsed="0.012119"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.770223" level="INFO">${cart number} = 1</msg>
+<msg time="2025-03-31T01:07:41.908078" level="INFO">${cart number} = 1</msg>
 <var>${cart number}</var>
 <arg>${cart icon}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.760153" elapsed="0.010245"/>
+<status status="PASS" start="2025-03-31T01:07:41.897030" elapsed="0.011247"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
 <arg>${cart number}</arg>
 <arg>${wanted number}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.770558" elapsed="0.000358"/>
+<status status="PASS" start="2025-03-31T01:07:41.908491" elapsed="0.000410"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.747985" elapsed="0.023075"/>
+<status status="PASS" start="2025-03-31T01:07:41.884302" elapsed="0.024709"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:13.706018" elapsed="1.065313"/>
+<status status="PASS" start="2025-03-31T01:07:41.841455" elapsed="0.067793"/>
 </test>
 <test id="s1-s1-t5" name="Navigate to shopping cart" line="32">
 <kw name="Navigate to shopping cart">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.773200" level="INFO">Clicking link 'css:[data-test="shopping-cart-link"]'.</msg>
+<msg time="2025-03-31T01:07:41.911051" level="INFO">Clicking link 'css:[data-test="shopping-cart-link"]'.</msg>
 <arg>css:[data-test="shopping-cart-link"]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.772959" elapsed="0.035778"/>
+<status status="PASS" start="2025-03-31T01:07:41.910828" elapsed="0.035941"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.772643" elapsed="0.036241"/>
+<status status="PASS" start="2025-03-31T01:07:41.910514" elapsed="0.036425"/>
 </kw>
 <kw name="Check item added">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css:[data-test="inventory-item"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.809441" elapsed="0.010206"/>
+<status status="PASS" start="2025-03-31T01:07:41.947671" elapsed="0.011372"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.809120" elapsed="0.010700"/>
+<status status="PASS" start="2025-03-31T01:07:41.947252" elapsed="0.011935"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.772058" elapsed="0.047973"/>
+<status status="PASS" start="2025-03-31T01:07:41.909978" elapsed="0.049445"/>
 </test>
 <test id="s1-s1-t6" name="Navigate to Checkout page" line="36">
 <kw name="Click checkout button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.822185" level="INFO">Clicking button 'css:[data-test="checkout"]'.</msg>
+<msg time="2025-03-31T01:07:41.961282" level="INFO">Clicking button 'css:[data-test="checkout"]'.</msg>
 <arg>css:[data-test="checkout"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.821892" elapsed="0.039011"/>
+<status status="PASS" start="2025-03-31T01:07:41.961052" elapsed="0.044023"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.821545" elapsed="0.039511"/>
+<status status="PASS" start="2025-03-31T01:07:41.960765" elapsed="0.044466"/>
 </kw>
-<status status="PASS" start="2025-03-31T00:42:14.820922" elapsed="0.040415"/>
+<status status="PASS" start="2025-03-31T01:07:41.960246" elapsed="0.045204"/>
 </test>
 <test id="s1-s1-t7" name="Add Your Information Data" line="39">
 <kw name="Enter personal data">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.863347" level="INFO">Typing text 'Circenn' into text field 'css:[data-test="firstName"]'.</msg>
+<msg time="2025-03-31T01:07:42.007531" level="INFO">Typing text 'Circenn' into text field 'css:[data-test="firstName"]'.</msg>
 <arg>css:[data-test="firstName"]</arg>
 <arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.863060" elapsed="0.043497"/>
+<status status="PASS" start="2025-03-31T01:07:42.007176" elapsed="0.041668"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.907212" level="INFO">Typing text 'Gomez' into text field 'css:[data-test="lastName"]'.</msg>
+<msg time="2025-03-31T01:07:42.049365" level="INFO">Typing text 'Gomez' into text field 'css:[data-test="lastName"]'.</msg>
 <arg>css:[data-test="lastName"]</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.906791" elapsed="0.038422"/>
+<status status="PASS" start="2025-03-31T01:07:42.049043" elapsed="0.039265"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T00:42:14.945732" level="INFO">Typing text '08015' into text field 'css:[data-test="postalCode"]'.</msg>
+<msg time="2025-03-31T01:07:42.088810" level="INFO">Typing text '08015' into text field 'css:[data-test="postalCode"]'.</msg>
 <arg>css:[data-test="postalCode"]</arg>
 <arg>${poscode}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T00:42:14.945408" elapsed="0.035448"/>
+<status status="PASS" start="2025-03-31T01:07:42.088499" elapsed="0.037333"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<msg time="2025-03-31T00:42:14.981390" level="FAIL">css:[data-test="firstName"] != Circenn</msg>
+<msg time="2025-03-31T01:07:42.126403" level="FAIL">css:[data-test="firstName"] != Circenn</msg>
 <arg>css:[data-test="firstName"]</arg>
 <arg>${firstname}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="FAIL" start="2025-03-31T00:42:14.981026" elapsed="0.000713">css:[data-test="firstName"] != Circenn</status>
+<status status="FAIL" start="2025-03-31T01:07:42.126034" elapsed="0.000771">css:[data-test="firstName"] != Circenn</status>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>css:[data-test="lastName"]</arg>
 <arg>${lastname}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-03-31T00:42:14.981882" elapsed="0.000164"/>
+<status status="NOT RUN" start="2025-03-31T01:07:42.126997" elapsed="0.000169"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>css:[data-test="postalCode"]</arg>
 <arg>${poscode}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-03-31T00:42:14.982349" elapsed="0.000259"/>
+<status status="NOT RUN" start="2025-03-31T01:07:42.127285" elapsed="0.000119"/>
 </kw>
-<status status="FAIL" start="2025-03-31T00:42:14.862741" elapsed="0.120054">css:[data-test="firstName"] != Circenn</status>
+<status status="FAIL" start="2025-03-31T01:07:42.006747" elapsed="0.120925">css:[data-test="firstName"] != Circenn</status>
 </kw>
-<status status="FAIL" start="2025-03-31T00:42:14.862127" elapsed="0.120948">css:[data-test="firstName"] != Circenn</status>
+<status status="FAIL" start="2025-03-31T01:07:42.006150" elapsed="0.121814">css:[data-test="firstName"] != Circenn</status>
 </test>
-<status status="FAIL" start="2025-03-31T00:42:11.846689" elapsed="3.137327"/>
+<test id="s1-s1-t8" name="Navigate to Overview page" line="42">
+<kw name="Navigate to Overview page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-31T01:07:42.129744" level="INFO">Clicking button 'css:[data-test="continue"]'.</msg>
+<arg>css:[data-test="continue"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T01:07:42.129493" elapsed="0.043038"/>
+</kw>
+<status status="PASS" start="2025-03-31T01:07:42.129193" elapsed="0.043512"/>
+</kw>
+<status status="PASS" start="2025-03-31T01:07:42.128728" elapsed="0.044289"/>
+</test>
+<test id="s1-s1-t9" name="Check order and Finish" line="45">
+<kw name="Check order">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[data-test="inventory-item"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T01:07:42.174856" elapsed="0.006703"/>
+</kw>
+<status status="PASS" start="2025-03-31T01:07:42.174550" elapsed="0.007142"/>
+</kw>
+<kw name="Finish order">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-31T01:07:42.182449" level="INFO">Clicking button 'css:[data-test="finish"]'.</msg>
+<arg>css:[data-test="finish"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T01:07:42.182223" elapsed="0.037042"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-31T01:07:42.225940" level="INFO">Current location is 'https://www.saucedemo.com/checkout-complete.html'.</msg>
+<arg>https://www.saucedemo.com/checkout-complete.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-03-31T01:07:42.219512" elapsed="0.006589"/>
+</kw>
+<status status="PASS" start="2025-03-31T01:07:42.181900" elapsed="0.044316"/>
+</kw>
+<status status="PASS" start="2025-03-31T01:07:42.174025" elapsed="0.052417"/>
+</test>
+<status status="FAIL" start="2025-03-31T01:07:39.641397" elapsed="2.585932"/>
 </suite>
-<status status="FAIL" start="2025-03-31T00:42:11.831763" elapsed="3.153264"/>
+<status status="FAIL" start="2025-03-31T01:07:39.626264" elapsed="2.602154"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="1" skip="0">All Tests</stat>
+<stat pass="8" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="HOUSFY" id="s1" pass="6" fail="1" skip="0">HOUSFY</stat>
-<stat name="004.problem user Part2" id="s1-s1" pass="6" fail="1" skip="0">HOUSFY.004.problem user Part2</stat>
+<stat name="HOUSFY" id="s1" pass="8" fail="1" skip="0">HOUSFY</stat>
+<stat name="001.Standard User" id="s1-s1" pass="8" fail="1" skip="0">HOUSFY.001.Standard User</stat>
 </suite>
 </statistics>
 <errors>

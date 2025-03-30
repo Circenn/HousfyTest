@@ -13,7 +13,7 @@ ${password}      secret_sauce
 
 *** Test Cases ***
 
-#TEST TOO CHECK PAGE NORMAL WORKFLOW
+#TEST TO CHECK NOT COMPLETED INFORMATION ERROR
 
 Navigate to main page
     Open Browser    ${SiteUrl}    ${Browser}
@@ -38,8 +38,8 @@ Navigate to Checkout page
 
 Add Your Information Data    
     Enter personal data
-    Continue without last name
-    Check Error exists
+    Navigate to Overview
+    If no completed personal data remain in page
 
 
 *** Keywords ***
@@ -75,12 +75,10 @@ Enter personal data
     Input Text    css:[data-test="lastName"]    ${lastname}
     Input Text    css:[data-test="postalCode"]    ${poscode}
 
-Continue without last name   
+Navigate to Overview   
     Click Button    css:[data-test="continue"]
 
-Check Error exists
-    Wait Until Element Is Visible   css:[data-test="error"]
-
-Check Error type
-    Element Should Contain    css:[data-test="error"]    "Error: Last Name is required"
-
+If no completed personal data remain in page
+    Location Should Be    https://www.saucedemo.com/checkout-step-one.html
+    Log To Console    Should remained in Your Information page!!!
+    

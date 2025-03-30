@@ -80,10 +80,6 @@ Enter personal data
     Input Text    css:[data-test="lastName"]    ${lastname}
     Input Text    css:[data-test="postalCode"]    ${poscode}
 
-    Should Be Equal   css:[data-test="firstName"]    ${firstname}
-    Should Be Equal    css:[data-test="lastName"]    ${lastname}
-    Should Be Equal    css:[data-test="postalCode"]    ${poscode}
-
 Navigate to Overview page
     Click Button    css:[data-test="continue"]
 
@@ -92,3 +88,4 @@ Check order
 
 Finish order
     Click Button    css:[data-test="finish"]
+    Location Should Be    https://www.saucedemo.com/checkout-complete.html 
